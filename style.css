@@ -1,0 +1,200 @@
+@charset "UTF-8";
+:root {
+ --negro: #393939;
+--tipo-principal: Helvetica, Arial, sans-serif;
+--tipo-secundaria: Verdana;
+font-size: 10px;
+}
+@media (prefers-color-scheme: dark) {
+:root {
+--negro: #ececec;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+ * {
+-webkit-animation: none !important;
+animation: none !important;
+ -webkit-transition: none !important;
+transition: none !important;
+}
+}
+* {
+margin: 0;
+padding: 0;
+border: 0;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+vertical-align: baseline;
+}
+img, picture, video, iframe, figure {
+max-width: 100%;
+width: 100%;
+display: block;
+-o-object-fit: cover;
+object-fit: cover;
+-o-object-position: center center;
+object-position: center center;
+}
+a {
+display: block;
+text-decoration: none;
+color: inherit;
+font-size: inherit;
+}
+p a {
+display: inline;
+}
+li {
+list-style-type: none;
+}
+html {
+scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+font-size: 1em;
+font-weight: inherit;
+font-style: inherit;
+text-decoration: none;
+color: inherit;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+content: "";
+content: none;
+}
+::-moz-selection {
+background-color: var(--negro);
+color: var(--blanco);
+}
+::selection {
+background-color: var(--negro);
+color: var(--blanco);
+}
+form, input, textarea, select, button, label {
+font-family: inherit;
+font-size: inherit;
+-webkit-hyphens: auto;
+-ms-hyphens: auto;
+hyphens: auto;
+background-color: transparent;
+color: inherit;
+display: block;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+table, tr, td {
+border-collapse: collapse;
+border-spacing: 0;
+}
+svg {
+width: 100%;
+display: block;
+fill: currentColor;
+}
+body {
+min-height: 100vh;
+font-size: 100%;
+font-family: var(--tipo-principal);
+
+line-height: 1.4em;
+-webkit-hyphens: auto;
+-ms-hyphens: auto;
+hyphens: auto;
+font-smooth: always;
+-webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+
+  .layout{
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b0b3d9;
+
+    .layout__main{
+      min-width: 50rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .main__container{
+        background-color: #151932;
+        min-width: 45rem;
+        height: 45rem;
+        border-radius: 100%;
+        padding: 3rem;
+
+        .main__crono{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 8rem;
+          align-items: center;
+          text-align: center;
+          color: #d6dffd;
+          border: 10px solid #99f870;
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          border-left-color: transparent;
+        }
+        .crono__btns{
+          display: flex;
+          flex-direction: row;
+          gap: 2.5rem;
+        }
+        .crono__time{
+          font-size: 8rem;
+          font-weight: 800;
+          color: #d6dffe;
+        }
+        .crono__start,.crono__pause{
+          text-transform: capitalize;
+          font-size: 1.4rem;
+          color: black;
+          font-weight: 600;
+          padding: 1rem;
+          border-radius: 1rem;
+          background-color: #99f870;
+          cursor: pointer;
+          transition: all 300ms ease;
+          &:hover{
+            background-color: #b0b3d9;
+          }
+        }
+       } 
+      
+      .main__nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        padding: 0.8rem;
+        border-radius: 5rem;
+        margin-top: 4rem;
+        background-color: #151932;
+        .nav__item{
+          text-transform: capitalize;
+          color: white;
+          opacity: .5;
+          font-weight: 700;
+          font-size: 1.4rem;
+          padding: 1.5rem;
+          cursor: pointer;
+          transition: all 300ms ease;
+          &:first-child,&:hover{
+            opacity: 1;
+            border-radius: 5rem;
+            color: #151932;
+            background-color: #99f870;
+          }
+        }
+      }
+    
+
+  }
+
+}
+}
